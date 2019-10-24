@@ -140,7 +140,7 @@ open class FocusEntity: Entity {
   // MARK: - Appearance
 
   /// Hides the focus square.
-  func hide() {
+  public func hide() {
     guard action(forKey: "hide") == nil else { return }
 
     displayNodeHierarchyOnTop(false)
@@ -148,7 +148,7 @@ open class FocusEntity: Entity {
   }
 
   /// Unhides the focus square.
-  func unhide() {
+  public func unhide() {
     guard action(forKey: "unhide") == nil else { return }
 
     displayNodeHierarchyOnTop(true)
