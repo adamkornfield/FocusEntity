@@ -141,18 +141,18 @@ open class FocusEntity: Entity {
 
   /// Hides the focus square.
   public func hide() {
-    guard action(forKey: "hide") == nil else { return }
-
-    displayNodeHierarchyOnTop(false)
-    runAction(.fadeOut(duration: 0.5), forKey: "hide")
+//    guard action(forKey: "hide") == nil else { return }
+//
+//    displayNodeHierarchyOnTop(false)
+//    runAction(.fadeOut(duration: 0.5), forKey: "hide")
   }
 
   /// Unhides the focus square.
   public func unhide() {
-    guard action(forKey: "unhide") == nil else { return }
-
-    displayNodeHierarchyOnTop(true)
-    runAction(.fadeIn(duration: 0.5), forKey: "unhide")
+//    guard action(forKey: "unhide") == nil else { return }
+//
+//    displayNodeHierarchyOnTop(true)
+//    runAction(.fadeIn(duration: 0.5), forKey: "unhide")
   }
 
   /// Displays the focus square parallel to the camera plane.
@@ -367,7 +367,7 @@ open class FocusEntity: Entity {
       return
     }
     // Perform hit testing only when ARKit tracking is in a good state.
-    guard let camera = view.session.currentFrame?.camera,
+    guard let camera = session.currentFrame?.camera,
       case .normal = camera.trackingState
     else {
       self.state = .initializing
